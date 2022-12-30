@@ -11,10 +11,10 @@ opt.softtabstop = 4
 opt.expandtab = true
 opt.autoindent = true
 
--- line wrapping 
+-- line wrapping
 opt.wrap = false
 
--- search settings 
+-- search settings
 opt.ignorecase = true
 opt.smartcase = true
 

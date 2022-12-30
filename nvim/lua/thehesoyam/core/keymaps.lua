@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 -- general keymaps
-keymap.set("i", "jk", "<ESC>") -- escape from insert mode
+-- keymap.set("i", "jk", "<ESC>") -- escape from insert mode
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search result
 keymap.set("n", "x", '"_x') -- don't copy on delete
 keymap.set("n", "<leader>-", "<C-x>") -- decrease a number
@@ -42,7 +42,7 @@ keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git bra
 -- keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
 -- fugitive
-keymap.set("n", "<leader>gs", "<cmd>:Git<CR>")
-keymap.set("n", "<leader>ga", "<cmd>Git fetch --all<CR>")
-keymap.set("n", "<leader>dj", ":diffget //2<CR>")
-keymap.set("n", "<leader>dk", ":diffget //3<CR>")
+keymap.set("n", "<leader>gs", "<cmd>:Git<CR>") -- git status
+keymap.set("n", "<leader>ga", "<cmd>Git fetch --all<CR>") -- git fetch all
+keymap.set("n", "<leader>gj", ":diffget //2<CR>") -- on merge get from the left
+keymap.set("n", "<leader>gk", ":diffget //3<CR>") -- on merget get from the right

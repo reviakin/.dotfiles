@@ -51,7 +51,9 @@ return require("packer").startup(function(use)
 
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
+	use("hrsh7th/cmp-nvim-lsp-signature-help") -- add signature helper
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+	use("hrsh7th/cmp-nvim-lua") --This source will complete neovim's Lua runtime API such vim.lsp.*.
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
@@ -70,13 +72,16 @@ return require("packer").startup(function(use)
 	})
 
 	-- auto closing
-	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+	-- use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	use("tpope/vim-fugitive")
+
+	use("simrat39/rust-tools.nvim")
+	use("rust-lang/rust.vim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

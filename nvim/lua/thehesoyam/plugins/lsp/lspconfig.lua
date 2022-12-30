@@ -16,6 +16,11 @@ if not typescript_setup then
 	return
 end
 
+local rust_status, rust = pcall(require, "rust-tools")
+if not rust_status then
+	return
+end
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -87,6 +92,13 @@ lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+})
+
+rust.setup({
+	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+	},
 })
 
 -- configure lua server (with special settings)
