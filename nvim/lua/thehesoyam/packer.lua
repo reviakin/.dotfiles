@@ -39,4 +39,8 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+
+  -- prettier format
+      use 'jose-elias-alvarez/null-ls.nvim'
+ 		  use 'MunifTanjim/prettier.nvim'
 end)
