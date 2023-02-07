@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
   use 'folke/tokyonight.nvim'
+  use 'navarasu/onedark.nvim'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
