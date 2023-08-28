@@ -53,7 +53,6 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
 
-  --	disabling eslint
   --	if client.name == "eslint" then
   --		vim.cmd.LspStop('eslint')
   --		return
