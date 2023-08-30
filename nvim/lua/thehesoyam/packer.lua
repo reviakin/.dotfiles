@@ -6,15 +6,22 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	})
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+      vim.cmd('colorscheme rose-pine')
+    end
+  })
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end, }
+  --Prime
   use('theprimeagen/harpoon')
+  use("theprimeagen/refactoring.nvim")
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   -- theme
@@ -46,6 +53,7 @@ return require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
 
+  use("folke/zen-mode.nvim")
 
   use 'folke/tokyonight.nvim'
   use "rebelot/kanagawa.nvim"
