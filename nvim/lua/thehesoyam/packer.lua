@@ -21,7 +21,13 @@ return require('packer').startup(function(use)
     end, }
   --Prime
   use('theprimeagen/harpoon')
-  use("theprimeagen/refactoring.nvim")
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-treesitter/nvim-treesitter" }
+    }
+  }
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   -- theme

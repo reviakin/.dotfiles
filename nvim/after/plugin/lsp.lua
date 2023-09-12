@@ -1,5 +1,10 @@
 local lsp = require("lsp-zero")
 
+-- [
+--
+-- https://github.com/VonHeikemen/lsp-zero.nvim
+-- ]
+--
 lsp.preset("recommended")
 
 lsp.ensure_installed({
@@ -64,5 +69,5 @@ end)
 lsp.setup()
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
 })
