@@ -200,6 +200,11 @@ _G.packer_plugins = {
     path = "/Users/thehesoyam/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-jsdoc"] = {
+    loaded = true,
+    path = "/Users/thehesoyam/.local/share/nvim/site/pack/packer/start/vim-jsdoc",
+    url = "https://github.com/heavenshell/vim-jsdoc"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/Users/thehesoyam/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",

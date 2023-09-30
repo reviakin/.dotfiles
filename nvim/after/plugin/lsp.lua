@@ -13,6 +13,7 @@ lsp.ensure_installed({
   'lua_ls',
   'rust_analyzer',
   'solidity',
+  'gopls',
 })
 
 -- Fix Undefined global 'vim'
@@ -69,5 +70,5 @@ end)
 lsp.setup()
 
 vim.diagnostic.config({
-  virtual_text = false,
+  virtual_text = true,
 })
